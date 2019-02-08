@@ -5,36 +5,45 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.viksaa.sssplash.lib.activity.AwesomeSplash;
+import com.viksaa.sssplash.lib.cnst.Flags;
+import com.viksaa.sssplash.lib.model.ConfigSplash;
+
+import app.android.movieslist.Constants;
 import app.android.movieslist.R;
 
 /**
  * Created by harrisazam on 2/8/2019.
  */
 
-public class SplashActivity extends AppCompatActivity {
-
-    private int DELAYMILLISEC = 2000;
+public class SplashActivity extends AwesomeSplash {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+    public void initSplash(ConfigSplash configSplash) {
 
-        moveToNext();
+        //CUSTOMIZE CIRCULAR VIEW
+        configSplash.setBackgroundColor(R.color.colorPrimary);
+        configSplash.setAnimCircularRevealDuration(1500);
+        configSplash.setRevealFlagX(Flags.REVEAL_RIGHT);
+        configSplash.setRevealFlagY(Flags.REVEAL_BOTTOM);
+
+        //CUSTOMIZE LOGO
+        configSplash.setLogoSplash(R.drawable.ic_launcher);
+        configSplash.setAnimLogoSplashDuration(1500);
+        configSplash.setAnimLogoSplashTechnique(Techniques.FadeIn);
+
+        //CUSTOMIZE TITLE
+        configSplash.setTitleSplash(getResources().getString(R.string.str_welcome));
+        configSplash.setTitleTextColor(R.color.colorWhite);
+        configSplash.setTitleTextSize(20f);
+        configSplash.setAnimTitleDuration(2500);
+        configSplash.setAnimTitleTechnique(Techniques.FadeIn);
     }
 
-    /**
-     * METHOD TO MOVE TO NEXT ACTIVITY
-     */
-    private void moveToNext() {
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
-                finish();
-            }
-        }, DELAYMILLISEC);
-
+    @Override
+    public void animationsFinished() {
+        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+        finish();
     }
 }

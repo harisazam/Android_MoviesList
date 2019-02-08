@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">MoviesList</string>
-    <string name="str_welcome">Welcome</string>
+    <string name="app_name">Movies List</string>
+    <string name="str_welcome">Welcome To Movies List App</string>
 </resources>
