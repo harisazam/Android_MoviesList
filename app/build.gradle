@@ -45,6 +45,15 @@ dependencies {
 
     /*LIBRARY FOR SCALE ABLE SCREEN SIZES*/
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
-    
 
+    /*LIBRARY FOR VIEW BINDING*/
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    /*LIBRARY FOR NETWORK CALLS*/
+    implementation 'com.amitshekhar.android:android-networking:1.0.0'
+
+    /*LIBRARY TO SHOW  SKELETON LOADING VIEW */
+    implementation 'com.ethanhua:skeleton:1.1.2'
+    implementation 'io.supercharge:shimmerlayout:2.1.0'
 }

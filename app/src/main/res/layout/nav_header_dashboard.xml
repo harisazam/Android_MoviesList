@@ -17,7 +17,7 @@
             android:id="@+id/topImageIV"
             android:layout_width="wrap_content"
             android:layout_height="160dp"
-            android:background="@color/colorPrimaryDark">
+            android:background="@color/colorOrange">
 
             <ImageView
                 android:id="@+id/userImgLargeIV"
@@ -25,12 +25,12 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="0dp"
                 android:scaleType="center"
-                android:src="@drawable/ic_launcher" />
+                android:src="@drawable/ic_user" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorWhite" />
+                android:background="@color/colorOrange" />
 
         </RelativeLayout>
 
@@ -41,9 +41,9 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="110dp"
-            android:background="@color/colorPrimary"
+            android:background="@color/colorLiteBlack"
             android:scaleType="centerInside"
-            android:src="@drawable/ic_launcher" />
+            android:src="@drawable/ic_user" />
 
         <app.android.movieslist.utils.custom_views.CustomTextView
             android:id="@+id/tv_UserName"

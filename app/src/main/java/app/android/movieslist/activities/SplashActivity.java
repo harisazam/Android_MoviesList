@@ -19,21 +19,21 @@ public class SplashActivity extends AwesomeSplash {
     public void initSplash(ConfigSplash configSplash) {
 
         //CUSTOMIZE CIRCULAR VIEW
-        configSplash.setBackgroundColor(R.color.colorPrimary);
+        configSplash.setBackgroundColor(R.color.colorOrange);
         configSplash.setAnimCircularRevealDuration(1500);
         configSplash.setRevealFlagX(Flags.REVEAL_RIGHT);
         configSplash.setRevealFlagY(Flags.REVEAL_BOTTOM);
 
         //CUSTOMIZE LOGO
         configSplash.setLogoSplash(R.drawable.ic_launcher);
-        configSplash.setAnimLogoSplashDuration(1500);
+        configSplash.setAnimLogoSplashDuration(1000);
         configSplash.setAnimLogoSplashTechnique(Techniques.FadeIn);
 
         //CUSTOMIZE TITLE
         configSplash.setTitleSplash(getResources().getString(R.string.str_welcome));
         configSplash.setTitleTextColor(R.color.colorWhite);
         configSplash.setTitleTextSize(20f);
-        configSplash.setAnimTitleDuration(2500);
+        configSplash.setAnimTitleDuration(1000);
         configSplash.setAnimTitleTechnique(Techniques.FadeIn);
     }
 

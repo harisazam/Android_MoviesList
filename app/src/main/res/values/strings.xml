@@ -6,4 +6,11 @@
     <string name="str_gender">Gender</string>
     <string name="str_address">Address</string>
     <string name="str_contact">Contact</string>
+    <string name="str_movies_list">Movies List</string>
+    <string name="str_ok">OK</string>
+    <string name="str_exit">Do you want to exit app?</string>
+    <string name="str_yes">Yes</string>
+    <string name="str_no">No</string>
+    <string name="str_detail_screen">Detail Screen</string>
+    <string name="str_movie_name">Movie Name</string>
 </resources>
