@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Movies List</string>
     <string name="str_welcome">Welcome To Movies List App</string>
+    <string name="str_guest">Guest</string>
+    <string name="str_guest_email">Guest@guest.com</string>
+    <string name="str_gender">Gender</string>
+    <string name="str_address">Address</string>
+    <string name="str_contact">Contact</string>
 </resources>

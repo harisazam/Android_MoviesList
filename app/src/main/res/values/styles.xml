@@ -16,4 +16,9 @@
         <item name="android:windowDisablePreview">true</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
+
+    <!--TOOL BAR STYLE-->
+    <style name="HeaderBar">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
 </resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_drawer_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:id="@+id/topImageIV"
+            android:layout_width="wrap_content"
+            android:layout_height="160dp"
+            android:background="@color/colorPrimaryDark">
+
+            <ImageView
+                android:id="@+id/userImgLargeIV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_launcher" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/userImageSmallIV"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="110dp"
+            android:background="@color/colorPrimary"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_launcher" />
+
+        <app.android.movieslist.utils.custom_views.CustomTextView
+            android:id="@+id/tv_UserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userImageSmallIV"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="@string/str_guest"
+            android:textColor="@color/colorLightGray"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <app.android.movieslist.utils.custom_views.CustomTextView
+            android:id="@+id/tv_Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_UserName"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:singleLine="true"
+            android:text="@string/str_guest_email"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorLightGray"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>
