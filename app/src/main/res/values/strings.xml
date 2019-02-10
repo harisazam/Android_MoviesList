@@ -29,4 +29,8 @@
     <string name="str_age">Age</string>
     <string name="str_eye_color">Eye Color</string>
     <string name="str_hair_color">Hair Color</string>
+    <string name="str_location_name">Location Name</string>
+    <string name="str_climate">Climate</string>
+    <string name="str_terrain">Terrain</string>
+    <string name="str_surface_water">Surface Water</string>
 </resources>

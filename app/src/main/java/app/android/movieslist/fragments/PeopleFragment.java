@@ -203,16 +203,6 @@ public class PeopleFragment extends ToolbarFragment implements View.OnClickListe
                         LinearLayoutManager.VERTICAL, false));
                 peopleListAdapter = new PeopleListAdapter(peopleModels, context, recyclerView);
                 recyclerView.setAdapter(peopleListAdapter);
-                peopleListAdapter.setClickListener(new PeopleListAdapter.ClickListeners() {
-                    @Override
-                    public void onItemClick(View view, int position) {
-                        switch (view.getId()) {
-//                            case R.id.iv_vehicles:
-//                                FragmentOp.gotoNextFragment(context, VehiclesFragment.newInstance());
-//                                break;
-                        }
-                    }
-                });
             } else {
                 //TODO OTHER WISE ADD DATA
             }
