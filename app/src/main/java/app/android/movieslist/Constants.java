@@ -10,5 +10,6 @@ public class Constants {
     public static final String DEFAULT_FONT_NAME = "";
     public static final String API_BASE_URL = "https://ghibliapi.herokuapp.com/";
     public static final String API_END_POINT_FILMS = API_BASE_URL + "films";
+    public static final String API_END_POINT_PEOPLE = API_BASE_URL + "people";
 
 }

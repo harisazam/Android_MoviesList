@@ -25,4 +25,8 @@
     <string name="str_people">People</string>
     <string name="str_species">Species</string>
     <string name="ste_vehicles">Vehicles</string>
+    <string name="str_user_name">User Name</string>
+    <string name="str_age">Age</string>
+    <string name="str_eye_color">Eye Color</string>
+    <string name="str_hair_color">Hair Color</string>
 </resources>
