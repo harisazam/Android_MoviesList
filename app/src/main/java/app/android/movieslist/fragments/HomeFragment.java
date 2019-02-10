@@ -159,10 +159,7 @@ public class HomeFragment extends ToolbarFragment implements View.OnClickListene
                             }.getType();
                             ArrayList<MovieModel> userModelArrayList = new Gson().fromJson(response.toString(), listType);
 
-                            if (userModelArrayList != null && userModelArrayList.size() > 0) {
-                                showNoResult(false);
-                                populateRecyclerView(userModelArrayList);
-                            }
+                            populateRecyclerView(userModelArrayList);
                             Log.e(TAG, "" + response.toString());
                         } catch (Exception e) {
                             Log.e(TAG, "" + e.getMessage());
@@ -204,6 +201,7 @@ public class HomeFragment extends ToolbarFragment implements View.OnClickListene
     private void populateRecyclerView(final ArrayList<MovieModel> movieModels) {
 
         if (movieModels != null && movieModels.size() > 0) {
+            showNoResult(false);
             if (moviesListAdapter == null) {
                 recyclerView.setItemAnimator(new DefaultItemAnimator());
                 recyclerView.setLayoutManager(new LinearLayoutManager(context,
@@ -215,7 +213,7 @@ public class HomeFragment extends ToolbarFragment implements View.OnClickListene
                     public void onItemClick(View view, int position) {
                         switch (view.getId()) {
                             case R.id.rv_MovieCardParent:
-                                FragmentOp.gotoNextFragment(context, DetailFragment.newInstance());
+                                FragmentOp.gotoNextFragment(context, DetailFragment.newInstance(moviesListAdapter.getItem(position)));
                                 break;
                             case R.id.iv_locations:
                                 FragmentOp.gotoNextFragment(context, LocationFragment.newInstance());
@@ -248,5 +246,4 @@ public class HomeFragment extends ToolbarFragment implements View.OnClickListene
                 break;
         }
     }
-
 }
