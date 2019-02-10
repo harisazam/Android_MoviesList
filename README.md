@@ -22,7 +22,7 @@ Lets start :)
 * Sample UI test case
 * Sample unit test
 
-### Architecture Design Pattern
+## Architecture Design Pattern
 
 Design pattern used in this project is ```MVC```. The model, view, controller approach separates your application at a macro level into 3 sets of responsibilities.
 
@@ -45,7 +45,7 @@ Support from ```SDK version 17``` onwards
 ### Libraries Used
 ```ruby
 dependencies {
-	/*LIBRARY FOR SPLASH ANIMATION*/
+    /*LIBRARY FOR SPLASH ANIMATION*/
     implementation'com.github.ViksaaSkool:AwesomeSplash:v1.0.0'
     
     /*LIBRARY FOR SCALE ABLE SCREEN SIZES*/
@@ -68,7 +68,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:3.0.2'
     testImplementation 'org.mockito:mockito-core:1.10.19'
     testImplementation 'com.squareup.okhttp3:mockwebserver:3.13.1'
-	}
+  }
 ```
 ### AwesomeSplash
 Library used for customizable animation work on ```Splash Screen```
