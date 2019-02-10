@@ -2,7 +2,7 @@
 
 [![N|Solid](https://cdn1.imggmi.com/uploads/2019/2/10/56a2a12b1abab60f46270c96743d9a97-full.png)](https://cdn1.imggmi.com/uploads/2019/2/10/56a2a12b1abab60f46270c96743d9a97-full.png)
 
-This Android project contains sample APIs integration with sample UI, APIs documentation is here [Document Link][df1], main purpose to develop this project is to explan architecture approch and patterns used.  
+This Android project contains sample APIs integration with sample UI, APIs documentation is here [Document Link][df1], main purpose to develop this project is to explain architecture approach and patterns used.  
 
 ## What's Inside
 
@@ -22,7 +22,7 @@ Lets start :)
 * Sample UI test case
 * Sample unit test
 
-## Architecture Design Pattern
+### Architecture Design Pattern
 
 Design pattern used in this project is ```MVC```. The model, view, controller approach separates your application at a macro level into 3 sets of responsibilities.
 
@@ -30,7 +30,7 @@ Design pattern used in this project is ```MVC```. The model, view, controller ap
 The model is the Data + State + Business logic of our application. It’s the brains of our application. It is not tied to the view or controller, and because of this, it is reusable in many contexts.
 
 ### View
-The view is the Representation of the Model. The view has a responsibility to render the User Interface (UI) and communicate to the controller when the user interacts with the application. In MVC architecture, Views are generally pretty “dumb” in that they have no knowledge of the underlying model and no understanding of state or what to do when a user interacts by clicking a button, typing a value, etc. The idea is that the less they know the more loosely coupled they are to the model and therefore the more flexible they are to change.
+The view is the Representation of the Model. The view has a responsibility to render the User Interface (UI) and communicate to the controller when the user interacts with the application. In ```MVC``` architecture, Views are generally pretty “dumb” in that they have no knowledge of the underlying model and no understanding of state or what to do when a user interacts by clicking a button, typing a value, etc. The idea is that the less they know the more loosely coupled they are to the model and therefore the more flexible they are to change.
 
 ### Controller
 The controller is Glue that ties the app together. It’s the master controller for what happens in the application. When the View tells the controller that a user clicked a button, the controller decides how to interact with the model accordingly. Based on data changing in the model, the controller may decide to update the state of the view as appropriate. In the case of an Android application, the controller is almost always represented by an Activity or Fragment.
@@ -45,7 +45,7 @@ Support from ```SDK version 17``` onwards
 ### Libraries Used
 ```ruby
 dependencies {
-    /*LIBRARY FOR SPLASH ANIMATION*/
+	/*LIBRARY FOR SPLASH ANIMATION*/
     implementation'com.github.ViksaaSkool:AwesomeSplash:v1.0.0'
     
     /*LIBRARY FOR SCALE ABLE SCREEN SIZES*/
@@ -68,7 +68,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:3.0.2'
     testImplementation 'org.mockito:mockito-core:1.10.19'
     testImplementation 'com.squareup.okhttp3:mockwebserver:3.13.1'
-  }
+	}
 ```
 ### AwesomeSplash
 Library used for customizable animation work on ```Splash Screen```
