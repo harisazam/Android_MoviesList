@@ -13,4 +13,7 @@
     <string name="str_no">No</string>
     <string name="str_detail_screen">Detail Screen</string>
     <string name="str_movie_name">Movie Name</string>
+    <string name="str_connection_error">Internet connection seems to be offline, pleas try again later!</string>
+    <string name="str_no_film_found">No Record Found</string>
+    <string name="str_try_again">Try Again!</string>
 </resources>

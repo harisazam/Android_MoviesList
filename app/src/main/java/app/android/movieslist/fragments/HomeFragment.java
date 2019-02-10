@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
@@ -30,8 +31,8 @@ import app.android.movieslist.Constants;
 import app.android.movieslist.R;
 import app.android.movieslist.adapters.MoviesListAdapter;
 import app.android.movieslist.models.MovieModel;
-import app.android.movieslist.utils.custom_views.CustomTextView;
-import app.android.movieslist.utils.fragment_utils.FragmentOp;
+import app.android.movieslist.utils.MessageUtil;
+import app.android.movieslist.utils.Utils;
 import app.android.movieslist.utils.toolbar_utils.ToolbarOp;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -40,7 +41,7 @@ import butterknife.ButterKnife;
  * Created by harrisazam on 2/9/2019.
  */
 
-public class HomeFragment extends ToolbarFragment {
+public class HomeFragment extends ToolbarFragment implements View.OnClickListener {
 
     private Context context;
     private String TAG = this.getClass().getSimpleName();
@@ -51,8 +52,11 @@ public class HomeFragment extends ToolbarFragment {
     @BindView(R.id.swipeRefresh)
     SwipeRefreshLayout swipeRefreshLayout;
 
-//    @BindView(R.id.noResultView)
-//    View noResultView;
+    @BindView(R.id.noResultView)
+    View noResultView;
+
+    @BindView(R.id.tv_TryAgain)
+    Button tv_TryAgain;
 
     private MoviesListAdapter moviesListAdapter;
     private SkeletonScreen skeletonScreen;
@@ -80,9 +84,16 @@ public class HomeFragment extends ToolbarFragment {
         ButterKnife.bind(this, view);
 
         initViews();
+        getFilmsListAPICall();
+
+        //TODO FOR TESTING
         showSkeletonView();
+        //TODO FOR TESTING
     }
 
+    /**
+     * METHOD TO SHOW SKELETON VIEW WHILE API CALLING
+     */
     private void showSkeletonView() {
         recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
         MoviesListAdapter adapter = new MoviesListAdapter();
@@ -94,7 +105,7 @@ public class HomeFragment extends ToolbarFragment {
                 .duration(1200)
                 .count(10)
                 .load(R.layout.layout_skeleton_item_movie)
-                .show(); //default count is 10
+                .show();
     }
 
     @Override
@@ -108,7 +119,8 @@ public class HomeFragment extends ToolbarFragment {
      */
     private void initViews() {
 
-        showNoResult(true);
+        tv_TryAgain.setOnClickListener(this);
+
         swipeRefreshLayout.setColorSchemeResources(
                 R.color.colorPrimary,
                 R.color.colorPrimary,
@@ -120,7 +132,7 @@ public class HomeFragment extends ToolbarFragment {
                 if (moviesListAdapter != null) {
                     moviesListAdapter = null;
                 }
-                getDummyDataAPICall();
+                getFilmsListAPICall();
             }
         });
     }
@@ -128,17 +140,20 @@ public class HomeFragment extends ToolbarFragment {
     /**
      * GET MOVIES LIST DATA API NETWORK CALL
      */
-    private void getDummyDataAPICall() {
-
-        AndroidNetworking.get(Constants.API_BASE_URL + Constants.API_END_POINT_FILMS)
+    private void getFilmsListAPICall() {
+        if (!Utils.hasInternetConnection(context)) {
+            showNoResult(true);
+            MessageUtil.showSnackbar(context, getString(R.string.str_connection_error), true);
+            return;
+        }
+        showSkeletonView();
+        AndroidNetworking.get(Constants.API_END_POINT_FILMS)
                 .setPriority(Priority.HIGH)
                 .build()
                 .getAsJSONArray(new JSONArrayRequestListener() {
                     @Override
                     public void onResponse(JSONArray response) {
-                        stopRefreshing();
                         try {
-
                             Type listType = new TypeToken<ArrayList<MovieModel>>() {
                             }.getType();
                             ArrayList<MovieModel> userModelArrayList = new Gson().fromJson(response.toString(), listType);
@@ -155,7 +170,6 @@ public class HomeFragment extends ToolbarFragment {
 
                     @Override
                     public void onError(ANError anError) {
-                        stopRefreshing();
                         showNoResult(true);
                         Log.e(TAG, "" + anError.toString());
                     }
@@ -175,8 +189,12 @@ public class HomeFragment extends ToolbarFragment {
      * METHOD TO SHOW/HIDE NO RESULT VIEW
      */
     private void showNoResult(boolean isShow) {
-//        noResultView.setVisibility(isShow ? View.VISIBLE : View.GONE);
-//        recyclerView.setVisibility(isShow ? View.GONE : View.VISIBLE);
+        if (!isShow && skeletonScreen != null) {
+            skeletonScreen.hide();
+        }
+        noResultView.setVisibility(isShow ? View.VISIBLE : View.GONE);
+        swipeRefreshLayout.setVisibility(isShow ? View.GONE : View.VISIBLE);
+        stopRefreshing();
     }
 
     /**
@@ -196,6 +214,15 @@ public class HomeFragment extends ToolbarFragment {
             }
         } else {
             showNoResult(true);
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.tv_TryAgain:
+                getFilmsListAPICall();
+                break;
         }
     }
 }

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <app.android.movieslist.utils.custom_views.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_launcher"
+        android:text="@string/str_no_film_found"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/tv_TryAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="@string/str_try_again"
+        android:textColor="@color/colorOrange"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
