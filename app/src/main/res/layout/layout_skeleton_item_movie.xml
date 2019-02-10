@@ -1,70 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="130dp"
-    android:layout_marginBottom="8dp"
-    android:background="@android:color/transparent">
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_3sdp"
+    android:layout_marginTop="@dimen/_3sdp"
+    android:layout_marginEnd="@dimen/_3sdp"
+    android:layout_marginBottom="@dimen/_3sdp"
+    android:orientation="vertical">
 
-    <View
-        android:layout_width="0dp"
-        android:layout_height="1px"
-        android:background="@color/colorLightGray"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintLeft_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_305sdp"
+        android:elevation="@dimen/_2sdp"
+        app:cardCornerRadius="3dp">
 
-    <View
-        android:id="@+id/img_news"
-        android:layout_width="90dp"
-        android:layout_height="0dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/light_transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
 
-    <View
-        android:id="@+id/tv_title"
-        android:layout_width="0dp"
-        android:layout_height="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="50dp"
-        android:background="@color/light_transparent"
-        android:text="Google正式发布Android8.0"
-        app:layout_constraintLeft_toRightOf="@+id/img_news"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/img_news" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-    <View
-        android:id="@+id/tv_content"
-        android:layout_width="0dp"
-        android:layout_height="14dp"
-        android:layout_marginRight="16dp"
-        android:background="@color/light_transparent"
-        app:layout_constraintBottom_toBottomOf="@+id/img_news"
-        app:layout_constraintLeft_toLeftOf="@+id/tv_title"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/img_news" />
+                <View
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@color/light_transparent" />
 
-    <View
-        android:id="@+id/tv_time"
-        android:layout_width="0dp"
-        android:layout_height="12dp"
-        android:layout_marginRight="50dp"
-        android:background="@color/light_transparent"
-        app:layout_constraintBottom_toBottomOf="@+id/img_news"
-        app:layout_constraintLeft_toLeftOf="@+id/tv_title"
-        app:layout_constraintRight_toRightOf="parent" />
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_40sdp"
+                    android:background="@color/light_transparent" />
 
-    <View
-        android:layout_width="0dp"
-        android:layout_height="1px"
-        android:background="@color/colorLightGray"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintLeft_toRightOf="parent" />
-</android.support.constraint.ConstraintLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/light_transparent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_40sdp"
+                android:background="@color/light_transparent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_40sdp"
+                android:background="@color/light_transparent" />
+
+            <View
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@color/light_transparent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="@color/light_transparent" />
+
+                <View
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@color/light_transparent" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@color/light_transparent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="@color/light_transparent" />
+
+                <View
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@color/light_transparent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_13sdp"
+                        android:background="@color/light_transparent" />
+
+                    <View
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/light_transparent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_13sdp"
+                        android:background="@color/light_transparent" />
+
+                    <View
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/light_transparent" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:background="@color/light_transparent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:background="@color/light_transparent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:background="@color/light_transparent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:background="@color/light_transparent" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

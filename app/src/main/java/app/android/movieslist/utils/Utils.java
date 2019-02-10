@@ -10,6 +10,8 @@ import android.net.NetworkInfo;
 import android.view.Display;
 import android.view.WindowManager;
 
+import java.util.ArrayList;
+
 /**
  * Created by harrisazam on 2/8/2019.
  */

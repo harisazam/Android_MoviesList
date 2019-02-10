@@ -7,7 +7,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 
 import java.util.List;
 
@@ -70,16 +72,59 @@ public class MoviesListAdapter extends RecyclerView.Adapter {
 
         @BindView(R.id.tv_MovieName)
         CustomTextView tv_MovieName;
+        @BindView(R.id.tv_Description)
+        CustomTextView tv_Description;
+        @BindView(R.id.tv_producer)
+        CustomTextView tv_producer;
+        @BindView(R.id.tv_Director)
+        CustomTextView tv_Director;
+        @BindView(R.id.tv_release)
+        CustomTextView tv_release;
+        @BindView(R.id.tv_rate)
+        CustomTextView tv_rate;
+        @BindView(R.id.iv_locations)
+        ImageView iv_locations;
+        @BindView(R.id.iv_species)
+        ImageView iv_species;
+        @BindView(R.id.iv_vehicles)
+        ImageView iv_vehicles;
+        @BindView(R.id.iv_people)
+        ImageView iv_people;
+        @BindView(R.id.rv_MovieCardParent)
+        RelativeLayout rv_MovieCardParent;
+
 
         public MovieViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
+
+            iv_locations.setOnClickListener(this);
+            iv_people.setOnClickListener(this);
+            iv_species.setOnClickListener(this);
+            iv_vehicles.setOnClickListener(this);
+            rv_MovieCardParent.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
-                case R.id.tv_MovieName:
+                case R.id.rv_MovieCardParent:
+                    if (clickListener != null)
+                        clickListener.onItemClick(v, getAdapterPosition());
+                    break;
+                case R.id.iv_locations:
+                    if (clickListener != null)
+                        clickListener.onItemClick(v, getAdapterPosition());
+                    break;
+                case R.id.iv_people:
+                    if (clickListener != null)
+                        clickListener.onItemClick(v, getAdapterPosition());
+                    break;
+                case R.id.iv_species:
+                    if (clickListener != null)
+                        clickListener.onItemClick(v, getAdapterPosition());
+                    break;
+                case R.id.iv_vehicles:
                     if (clickListener != null)
                         clickListener.onItemClick(v, getAdapterPosition());
                     break;
@@ -169,6 +214,11 @@ public class MoviesListAdapter extends RecyclerView.Adapter {
                 MovieViewHolder itemTypeViewHolder = (MovieViewHolder) holder;
 
                 itemTypeViewHolder.tv_MovieName.setText(itemBO.getTitle());
+                itemTypeViewHolder.tv_Description.setText(itemBO.getDescription());
+                itemTypeViewHolder.tv_Director.setText(itemBO.getDirector());
+                itemTypeViewHolder.tv_producer.setText(itemBO.getProducer());
+                itemTypeViewHolder.tv_release.setText(itemBO.getRelease_date());
+                itemTypeViewHolder.tv_rate.setText(itemBO.getRt_score());
 
             } else if (holder instanceof LoadingViewHolder) {
                 LoadingViewHolder loadingViewHolder = (LoadingViewHolder) holder;
@@ -181,9 +231,12 @@ public class MoviesListAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return dataSet.size();
+        int itemCount = 0;
+        if (dataSet != null && dataSet.size() > 0) {
+            itemCount = dataSet.size();
+        }
+        return itemCount;
     }
-
 
     /*Listeners*/
     ClickListeners clickListener;

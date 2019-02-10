@@ -33,6 +33,7 @@ import app.android.movieslist.adapters.MoviesListAdapter;
 import app.android.movieslist.models.MovieModel;
 import app.android.movieslist.utils.MessageUtil;
 import app.android.movieslist.utils.Utils;
+import app.android.movieslist.utils.fragment_utils.FragmentOp;
 import app.android.movieslist.utils.toolbar_utils.ToolbarOp;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -85,10 +86,6 @@ public class HomeFragment extends ToolbarFragment implements View.OnClickListene
 
         initViews();
         getFilmsListAPICall();
-
-        //TODO FOR TESTING
-        showSkeletonView();
-        //TODO FOR TESTING
     }
 
     /**
@@ -135,6 +132,10 @@ public class HomeFragment extends ToolbarFragment implements View.OnClickListene
                 getFilmsListAPICall();
             }
         });
+
+        if (moviesListAdapter != null) {
+            moviesListAdapter = null;
+        }
     }
 
     /**
@@ -209,6 +210,28 @@ public class HomeFragment extends ToolbarFragment implements View.OnClickListene
                         LinearLayoutManager.VERTICAL, false));
                 moviesListAdapter = new MoviesListAdapter(movieModels, context, recyclerView);
                 recyclerView.setAdapter(moviesListAdapter);
+                moviesListAdapter.setClickListener(new MoviesListAdapter.ClickListeners() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        switch (view.getId()) {
+                            case R.id.rv_MovieCardParent:
+                                FragmentOp.gotoNextFragment(context, DetailFragment.newInstance());
+                                break;
+                            case R.id.iv_locations:
+                                FragmentOp.gotoNextFragment(context, LocationFragment.newInstance());
+                                break;
+                            case R.id.iv_people:
+                                FragmentOp.gotoNextFragment(context, PeopleFragment.newInstance());
+                                break;
+                            case R.id.iv_species:
+                                FragmentOp.gotoNextFragment(context, SpeciesFragment.newInstance());
+                                break;
+                            case R.id.iv_vehicles:
+                                FragmentOp.gotoNextFragment(context, VehiclesFragment.newInstance());
+                                break;
+                        }
+                    }
+                });
             } else {
                 //TODO OTHER WISE ADD DATA
             }
@@ -225,4 +248,5 @@ public class HomeFragment extends ToolbarFragment implements View.OnClickListene
                 break;
         }
     }
+
 }

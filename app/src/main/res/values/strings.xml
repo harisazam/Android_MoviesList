@@ -16,4 +16,13 @@
     <string name="str_connection_error">Internet connection seems to be offline, pleas try again later!</string>
     <string name="str_no_film_found">No Record Found</string>
     <string name="str_try_again">Try Again!</string>
+    <string name="str_about_film">About Film</string>
+    <string name="str_director">Director</string>
+    <string name="str_producer">Producer</string>
+    <string name="str_released_date">Released Date</string>
+    <string name="str_rate_score">Rate Score</string>
+    <string name="str_locations">Locations</string>
+    <string name="str_people">People</string>
+    <string name="str_species">Species</string>
+    <string name="ste_vehicles">Vehicles</string>
 </resources>
