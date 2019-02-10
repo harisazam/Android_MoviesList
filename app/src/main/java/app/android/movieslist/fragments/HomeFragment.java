@@ -222,7 +222,7 @@ public class HomeFragment extends ToolbarFragment implements View.OnClickListene
                                 FragmentOp.gotoNextFragment(context, PeopleFragment.newInstance());
                                 break;
                             case R.id.iv_species:
-                                FragmentOp.gotoNextFragment(context, SpeciesFragment.newInstance());
+                                FragmentOp.gotoNextFragment(context, SpeciesFragment.newInstance(moviesListAdapter.getItem(position).getSpecies()[0] + ""));
                                 break;
                             case R.id.iv_vehicles:
                                 FragmentOp.gotoNextFragment(context, VehiclesFragment.newInstance());

@@ -37,4 +37,8 @@
     <string name="str_description">Description</string>
     <string name="str_vehicle_type">Vehicle Type</string>
     <string name="str_length">Length</string>
+    <string name="str_name">Name</string>
+    <string name="str_classification">Classification</string>
+    <string name="str_eye_colors">Eye Colors</string>
+    <string name="str_hair_colors">Hair Colors</string>
 </resources>
