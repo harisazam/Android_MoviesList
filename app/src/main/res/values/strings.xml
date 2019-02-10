@@ -33,4 +33,8 @@
     <string name="str_climate">Climate</string>
     <string name="str_terrain">Terrain</string>
     <string name="str_surface_water">Surface Water</string>
+    <string name="str_vehicle_name">Vehicle Name</string>
+    <string name="str_description">Description</string>
+    <string name="str_vehicle_type">Vehicle Type</string>
+    <string name="str_length">Length</string>
 </resources>

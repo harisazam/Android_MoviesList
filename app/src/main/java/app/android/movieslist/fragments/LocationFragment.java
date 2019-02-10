@@ -103,7 +103,7 @@ public class LocationFragment extends ToolbarFragment implements View.OnClickLis
                 .frozen(false)
                 .duration(1200)
                 .count(10)
-                .load(R.layout.layout_skeleton_item_movie)
+                .load(R.layout.layout_skeleton_item_location)
                 .show();
     }
 
@@ -221,11 +221,9 @@ public class LocationFragment extends ToolbarFragment implements View.OnClickLis
         }
     }
 
-
     @Override
     public void refreshToolbar() {
         ToolbarOp.refreshToolbar(getView(), context, getString(R.string.str_locations),
                 null, ToolbarOp.Theme.Dark, 0, null);
-
     }
 }

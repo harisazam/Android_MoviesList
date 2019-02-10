@@ -102,7 +102,7 @@ public class PeopleFragment extends ToolbarFragment implements View.OnClickListe
                 .frozen(false)
                 .duration(1200)
                 .count(10)
-                .load(R.layout.layout_skeleton_item_movie)
+                .load(R.layout.layout_skeleton_item_people)
                 .show();
     }
 
