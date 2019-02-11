@@ -2,41 +2,48 @@ package app.android.movieslist.activities;
 
 import android.app.Activity;
 import android.app.Instrumentation;
-import android.content.Context;
-import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
+import android.widget.Toolbar;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
+import app.android.movieslist.R;
+
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static org.junit.Assert.assertNotNull;
 
-public class SplashActivityTest {
+public class SplashActivityTestCase {
+
 
     @Rule
-    public ActivityTestRule<SplashActivity> activityActivityTestRule = new ActivityTestRule<SplashActivity>(SplashActivity.class);
+    public ActivityTestRule<SplashActivity> splashActivityTestRule = new ActivityTestRule<SplashActivity>(SplashActivity.class);
 
-    SplashActivity splashActivity;
+    private SplashActivity splashActivity = null;
+
     Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
 
     @Before
     public void setUp() throws Exception {
-        splashActivity = activityActivityTestRule.getActivity();
+        splashActivity = splashActivityTestRule.getActivity();
+
     }
 
     /**
-     * TEST CASE TO CHECK INTENT CALL FROM SPLASH TO MAIN ACTIVITY
+     * TEST CASE TO CHECK MAIN ACTIVITY CALLED AFTER SPLASH ACTIVITY
      */
     @Test
-    public void checkBaseURLs() throws Exception {
-        Activity mainActivity = getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+    public void checkCallFromSplash() {
+       Activity mainActivity = getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
         assertNotNull(mainActivity);
     }
 
+
     @After
     public void tearDown() throws Exception {
+        splashActivity = null;
     }
+
 }
