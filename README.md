@@ -87,7 +87,10 @@ Mockito to write Android unit tests.
 ##  Version
 Current Version ```1.0```
 
-## Author
+## Developed By
 Harris Azam.
+
+### Notes
+Always welcome ideas and suggestions :)
 
   [df1]: <https://ghibliapi.herokuapp.com/>
