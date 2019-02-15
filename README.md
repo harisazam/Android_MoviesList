@@ -36,7 +36,7 @@ The view is the Representation of the Model. The view has a responsibility to re
 The controller is Glue that ties the app together. It’s the master controller for what happens in the application. When the View tells the controller that a user clicked a button, the controller decides how to interact with the model accordingly. Based on data changing in the model, the controller may decide to update the state of the view as appropriate. In the case of an Android application, the controller is almost always represented by an Activity or Fragment.
 
 ### Diagram 
-[![N|Solid](https://cdn1.imggmi.com/uploads/2019/2/10/55417283f98c8e94a8d675ec6bae6f45-full.png)](https://cdn1.imggmi.com/uploads/2019/2/10/55417283f98c8e94a8d675ec6bae6f45-full.png)
+[![N|Solid](https://github.com/harisazam/Android_MoviesList/blob/master/screens/diagram.png)](https://github.com/harisazam/Android_MoviesList/blob/master/screens/diagram.png)
 
 # Gradel
 ### SDK Support
@@ -87,7 +87,7 @@ Mockito to write Android unit tests.
 ##  Version
 Current Version ```1.0```
 
-## Author
+## Developed By
 Harris Azam.
 
   [df1]: <https://ghibliapi.herokuapp.com/>
