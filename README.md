@@ -9,7 +9,7 @@ This Android project contains sample APIs integration with sample UI, APIs docum
 Lets start :)
 
 ## App UI
-[![N|Solid](https://cdn1.imggmi.com/uploads/2019/2/10/3daa20f5dcf92a3800b4a16e29293c82-full.png)](https://cdn1.imggmi.com/uploads/2019/2/10/3daa20f5dcf92a3800b4a16e29293c82-full.png) [![N|Solid](https://cdn1.imggmi.com/uploads/2019/2/10/3099c57f2195e61ab0fd8fdb04ec3dfe-full.png)](https://cdn1.imggmi.com/uploads/2019/2/10/3099c57f2195e61ab0fd8fdb04ec3dfe-full.png) [![N|Solid](https://cdn1.imggmi.com/uploads/2019/2/10/0090a63b431935b5d31bb1ff63d8b620-full.png)](https://cdn1.imggmi.com/uploads/2019/2/10/0090a63b431935b5d31bb1ff63d8b620-full.png) [![N|Solid](https://cdn1.imggmi.com/uploads/2019/2/10/3de99427830964e95dd08b6489b9c8c5-full.png)](https://cdn1.imggmi.com/uploads/2019/2/10/3de99427830964e95dd08b6489b9c8c5-full.png) [![N|Solid](https://cdn1.imggmi.com/uploads/2019/2/10/7e8fb65693d8a489eb5c7ca820a2bcdb-full.png)](https://cdn1.imggmi.com/uploads/2019/2/10/7e8fb65693d8a489eb5c7ca820a2bcdb-full.png) [![N|Solid](https://cdn1.imggmi.com/uploads/2019/2/10/284c1ae0dcc976db904c416e331fb490-full.png)](https://cdn1.imggmi.com/uploads/2019/2/10/284c1ae0dcc976db904c416e331fb490-full.png) [![N|Solid](https://cdn1.imggmi.com/uploads/2019/2/10/b3e7a2eeb57ee3ec349ee68452516bc9-full.png)](https://cdn1.imggmi.com/uploads/2019/2/10/b3e7a2eeb57ee3ec349ee68452516bc9-full.png) [![N|Solid](https://cdn1.imggmi.com/uploads/2019/2/10/d34646372c745e1fc7096ba9b007ab29-full.png)](https://cdn1.imggmi.com/uploads/2019/2/10/d34646372c745e1fc7096ba9b007ab29-full.png)
+[![N|Solid]https://github.com/harisazam/Android_MoviesList/blob/master/screens/Screenshot_2019-02-11-01-43-15.png)](https://github.com/harisazam/Android_MoviesList/blob/master/screens/Screenshot_2019-02-11-01-43-15.png) [![N|Solid](https://cdn1.imggmi.com/uploads/2019/2/10/3099c57f2195e61ab0fd8fdb04ec3dfe-full.png)](https://cdn1.imggmi.com/uploads/2019/2/10/3099c57f2195e61ab0fd8fdb04ec3dfe-full.png) [![N|Solid](https://cdn1.imggmi.com/uploads/2019/2/10/0090a63b431935b5d31bb1ff63d8b620-full.png)](https://cdn1.imggmi.com/uploads/2019/2/10/0090a63b431935b5d31bb1ff63d8b620-full.png) [![N|Solid](https://cdn1.imggmi.com/uploads/2019/2/10/3de99427830964e95dd08b6489b9c8c5-full.png)](https://cdn1.imggmi.com/uploads/2019/2/10/3de99427830964e95dd08b6489b9c8c5-full.png) [![N|Solid](https://cdn1.imggmi.com/uploads/2019/2/10/7e8fb65693d8a489eb5c7ca820a2bcdb-full.png)](https://cdn1.imggmi.com/uploads/2019/2/10/7e8fb65693d8a489eb5c7ca820a2bcdb-full.png) [![N|Solid](https://cdn1.imggmi.com/uploads/2019/2/10/284c1ae0dcc976db904c416e331fb490-full.png)](https://cdn1.imggmi.com/uploads/2019/2/10/284c1ae0dcc976db904c416e331fb490-full.png) [![N|Solid](https://cdn1.imggmi.com/uploads/2019/2/10/b3e7a2eeb57ee3ec349ee68452516bc9-full.png)](https://cdn1.imggmi.com/uploads/2019/2/10/b3e7a2eeb57ee3ec349ee68452516bc9-full.png) [![N|Solid](https://cdn1.imggmi.com/uploads/2019/2/10/d34646372c745e1fc7096ba9b007ab29-full.png)](https://cdn1.imggmi.com/uploads/2019/2/10/d34646372c745e1fc7096ba9b007ab29-full.png)
 
 ## Features
 
@@ -45,7 +45,7 @@ Support from ```SDK version 17``` onwards
 ### Libraries Used
 ```ruby
 dependencies {
-    /*LIBRARY FOR SPLASH ANIMATION*/
+	/*LIBRARY FOR SPLASH ANIMATION*/
     implementation'com.github.ViksaaSkool:AwesomeSplash:v1.0.0'
     
     /*LIBRARY FOR SCALE ABLE SCREEN SIZES*/
@@ -68,7 +68,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:3.0.2'
     testImplementation 'org.mockito:mockito-core:1.10.19'
     testImplementation 'com.squareup.okhttp3:mockwebserver:3.13.1'
-    }
+	}
 ```
 ### AwesomeSplash
 Library used for customizable animation work on ```Splash Screen```
@@ -87,10 +87,7 @@ Mockito to write Android unit tests.
 ##  Version
 Current Version ```1.0```
 
-## Developed By
+## Author
 Harris Azam.
-
-### Notes
-Always welcome ideas and suggestions :)
 
   [df1]: <https://ghibliapi.herokuapp.com/>
